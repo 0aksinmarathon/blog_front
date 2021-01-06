@@ -1,0 +1,76 @@
+{
+  "article": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "title": "Reactで開発始めました",
+      "body": "import './App.css';\nimport React, {useState} from 'react';\nimport {Button} from '@material-ui/core';\nimport {makeStyles} from '@material-ui/core/styles';\nimport AppBar from '@material-ui/core/AppBar';\nimport Toolbar from '@material-ui/core/Toolbar';\nimport Typography from '@material-ui/core/Typography';\nimport IconButton from '@material-ui/core/IconButton';\nimport MenuIcon from '@material-ui/icons/Menu';\nimport Drawer from '@material-ui/core/Drawer';\nimport List from '@material-ui/core/List';\nimport ListItem from '@material-ui/core/ListItem';\nimport ListItemIcon from '@material-ui/core/ListItemIcon';\nimport ListItemText from '@material-ui/core/ListItemText';\nimport HomeIcon from '@material-ui/icons/Home';\nimport DescriptionIcon from '@material-ui/icons/Description';\nimport EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';\nimport {Link} from \"react-router-dom\";",
+      "rating": 9.1
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "title": "djangoで開発始めました",
+      "body": "python",
+      "rating": 8.8
+    }
+  ],
+  "comment": [
+    {
+      "id": 1,
+      "user_id": 3,
+      "article_id": 1,
+      "body": "とてもためになった"
+    },
+    {
+      "id": 2,
+      "user_id": 4,
+      "article_id": 1,
+      "body": "参考になった"
+    },
+    {
+      "id": 3,
+      "user_id": 4,
+      "article_id": 2,
+      "body": "手抜き"
+    },
+    {
+      "id": 4,
+      "user_id": 4,
+      "article_id": 2,
+      "body": "ひどい出来だ"
+    },
+    {
+      "id": 5,
+      "user_id": 4,
+      "article_id": 2,
+      "body": "時間の無駄"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "田中"
+    },
+    {
+      "id": 2,
+      "name": "吉田"
+    },
+    {
+      "id": 3,
+      "name": "鈴木"
+    },
+    {
+      "id": 4,
+      "name": "佐藤"
+    },
+    {
+      "id": 5,
+      "name": "伊藤"
+    }
+  ]
+}
+
+
+
+
