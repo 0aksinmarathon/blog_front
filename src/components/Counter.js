@@ -1,5 +1,5 @@
 import React from "react";
-import {increment, decrement, reset} from "../state/actions";
+import {increment, decrement, reset} from "../state/actions/count";
 import {Button} from '@material-ui/core';
 import {useSelector, useDispatch} from "react-redux";
 

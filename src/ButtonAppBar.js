@@ -1,5 +1,6 @@
 import './App.css';
 import React, {useState} from 'react';
+import {useSelector, useDispatch} from "react-redux";
 import {Button} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -17,6 +18,7 @@ import DescriptionIcon from '@material-ui/icons/Description';
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import AddIcon from '@material-ui/icons/Add';
 import {Link} from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
         root: {
@@ -41,6 +43,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ButtonAppBar() {
     const classes = useStyles();
+    const history = useHistory()
+    const token = useSelector(state => state.user.token)
     const [isDrawerOpen, shiftDrawer] = useState(false);
 
     const toggleDrawer = (open) => (event) => {
@@ -104,7 +108,14 @@ export default function ButtonAppBar() {
                         <Typography variant="h6" className={classes.title}>
                             ブログ的な
                         </Typography>
-                        <Button color="inherit">Login</Button>
+                        {localStorage.getItem('Authorization') ?
+                        <Button color="inherit" onClick={() => {
+                            localStorage.setItem('Authorization', '');
+                            history.push('/login')
+                            }}>
+                            LOG OUT
+                        </Button> : null
+                        }
                     </Toolbar>
                 </AppBar>
             </div>

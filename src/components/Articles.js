@@ -7,9 +7,7 @@ export default function Articles() {
 
     useEffect(async () => {
         const res = await axios.get(`${process.env.REACT_APP_API_URL}/article`);
-        setArticles(res.data);
-        console.debug('render!');
-        console.debug(res.data)
+        setArticles(res.data)
         return () => console.log('unmounting...');
     }, [])
 

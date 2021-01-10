@@ -1,4 +1,4 @@
-import {INCREMENT, DECREMENT, RESET} from "../actions";
+import {INCREMENT, DECREMENT, RESET} from "../actions/count";
 
 const initialState = {count_value: 0}
 
